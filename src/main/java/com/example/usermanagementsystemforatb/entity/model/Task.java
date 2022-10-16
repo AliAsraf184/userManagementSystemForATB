@@ -1,4 +1,4 @@
-package com.example.usermanagementsystemforatb.repository.model;
+package com.example.usermanagementsystemforatb.entity.model;
 
 
 import lombok.AllArgsConstructor;

@@ -1,6 +1,8 @@
-package com.example.usermanagementsystemforatb.repository.model;
+package com.example.usermanagementsystemforatb.entity.model;
 
 
+import com.example.usermanagementsystemforatb.entity.model.Organization;
+import com.example.usermanagementsystemforatb.entity.model.Task;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

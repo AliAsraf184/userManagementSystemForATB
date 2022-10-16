@@ -1,10 +1,9 @@
-package com.example.usermanagementsystemforatb.repository.model;
+package com.example.usermanagementsystemforatb.entity.model;
 
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.context.annotation.Primary;
 
 import javax.persistence.*;
 import java.util.List;
