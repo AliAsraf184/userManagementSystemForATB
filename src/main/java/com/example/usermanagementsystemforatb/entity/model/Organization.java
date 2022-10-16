@@ -37,4 +37,13 @@ public class Organization {
                         inverseJoinColumns={ @JoinColumn(name="USER_ID", referencedColumnName="user_id", unique=true) }
                 )
     private List<User> userList;
+
+    @OneToMany
+    @JoinTable
+            (
+                    name="organization_and_tasks",
+                    joinColumns={ @JoinColumn(name="ORGANIZATION_ID1", referencedColumnName="organization_id") },
+                    inverseJoinColumns={ @JoinColumn(name="TASK_ID1", referencedColumnName="task_id", unique=true) }
+            )
+    private List<Task> taskList;
 }

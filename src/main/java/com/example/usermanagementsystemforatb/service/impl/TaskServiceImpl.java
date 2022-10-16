@@ -7,13 +7,12 @@ import com.example.usermanagementsystemforatb.entity.model.dto.TaskDto;
 import com.example.usermanagementsystemforatb.repository.TaskRepository;
 import com.example.usermanagementsystemforatb.repository.UserRepository;
 import com.example.usermanagementsystemforatb.service.TaskService;
-import com.sun.media.sound.ModelMappedInstrument;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.mail.MessagingException;
-import java.util.List;
+
 
 @Service
 public class TaskServiceImpl implements TaskService {
@@ -41,6 +40,8 @@ public class TaskServiceImpl implements TaskService {
 
         return message;
     }
+
+
 
 //    @Override
 //    public void sendEmail(User user, Task task, String subject) throws MessagingException {

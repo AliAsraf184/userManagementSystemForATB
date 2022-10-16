@@ -40,12 +40,13 @@ public class User {
     @JoinColumn(name="organization_id")
     private Organization organization;
 
-    @ManyToMany
+    @OneToMany
     @JoinTable(
-            name = "users_tasks",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "task_id"))
-    private List<Task> taskList;
+            name="user_and_tasks",
+            joinColumns={ @JoinColumn(name="USER_ID", referencedColumnName="user_id") },
+            inverseJoinColumns={ @JoinColumn(name="TASK_ID", referencedColumnName="task_id", unique=true) }
+    )
+    private List<Task> task;
 
 
 

@@ -16,6 +16,7 @@ public class Task {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "task_id")
     private Long taskId;
 
     private String title;
@@ -26,13 +27,18 @@ public class Task {
 
     private String status;
 
-    private String userId;
 
-    private String organizationId;
+    @ManyToOne
+    @JoinColumn(name="task_id1")
+    private User user;
 
-    @ManyToMany
 
-    private List<User> userList;
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="organization_id1")
+    private Organization organization;
+
+
+
 
 
 
